@@ -11,7 +11,7 @@
 
 ## Planning Story
 
-![Results from my teacher poll conducted on instagram](https://imgur.com/dVmMwMG)
+[Results from my teacher poll conducted on instagram](https://imgur.com/dVmMwMG)
 
 - The first step in my planning process was to do market research. I asked other teachers about tools they wished to have in the classroom. Most teachers polled said they would like a way to keep track of which students with whom they have had check-ins.
 - Next,
@@ -45,9 +45,9 @@
 ## Images
 
 #### Wireframe:
-![initial landing page wireframe](https://imgur.com/HANqQFv)
-![initial application wireframe](https://imgur.com/fbpXkYj)
+[initial landing page wireframe](https://imgur.com/HANqQFv)
+[initial application wireframe](https://imgur.com/fbpXkYj)
 ---
 
 #### ERD:
-![Initial Entity Relationship Diagram](https://imgur.com/zWtIKUa)
+[Initial Entity Relationship Diagram](https://imgur.com/zWtIKUa)
