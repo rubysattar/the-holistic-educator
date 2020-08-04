@@ -45,8 +45,8 @@
 ## Images
 
 #### Wireframe:
-[initial landing page wireframe](https://imgur.com/HANqQFv)
-[initial application wireframe](https://imgur.com/fbpXkYj)
+- [initial landing page wireframe](https://imgur.com/HANqQFv)
+- [initial application wireframe](https://imgur.com/fbpXkYj)
 ---
 
 #### ERD:
