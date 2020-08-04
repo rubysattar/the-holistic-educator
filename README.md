@@ -11,22 +11,21 @@ wanted to do this project, or came up with this idea.
 
 ## Planning Story
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin
-coffee williamsburg af poutine fingerstache austin semiotics paleo man braid
-vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats
-shoreditch try-hard health goth intelligentsia pop-up small batch skateboard
-farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday
-carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle
-tofu.
+After...
 
 ### User Stories
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+- As a teacher, I want to be able to sign up.
+- As a teacher, I want to be able to sign in.
+- As a teacher, I want to be able to change password.
+- As a teacher, I want to be able to sign out.
+- As a teacher, I want to add to my student roster.
+- As a teacher, I want to update individual students in my roster.
+- As a teacher, I want to delete individual students from my roster.
+
+- As a teacher, I want to add notes on my check-ins with each student.
+- As a teacher, I want to see which students have had check-ins (notes added).
+- As a teacher, I want to see which students have not had check-ins (no notes added).
 
 ### Technologies Used
 
@@ -43,9 +42,9 @@ tofu.
 ## Images
 
 #### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
-
+![initial landing page wireframe](https://imgur.com/HANqQFv)
+![initial application wireframe](https://imgur.com/fbpXkYj)
 ---
 
 #### ERD:
-![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)
+![Initial Entity Relationship Diagram](https://imgur.com/zWtIKUa)
