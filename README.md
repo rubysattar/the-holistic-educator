@@ -1,7 +1,7 @@
 # The Holistic Educator - front end application
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+- The final version of this project will be an application that tracks connections teachers make with students to inform the support they provide students for social-emotional development or behavioral concerns.
+- This project is near and dear to me as a huge advocate for social-emotional learning in schools. This application is a tool that many teachers who are tracking their connections with students will find helpful to ensure that they are reaching every student. 
 
 ## Important Links
 
@@ -11,7 +11,10 @@ wanted to do this project, or came up with this idea.
 
 ## Planning Story
 
-After...
+![Results from my teacher poll conducted on instagram](https://imgur.com/dVmMwMG)
+
+- The first step in my planning process was to do market research. I asked other teachers about tools they wished to have in the classroom. Most teachers polled said they would like a way to keep track of which students with whom they have had check-ins.
+- Next,
 
 ### User Stories
 
