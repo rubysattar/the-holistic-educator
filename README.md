@@ -18,15 +18,17 @@
 
 ### User Stories
 
-- As a teacher, I want to be able to sign up.
-- As a teacher, I want to be able to sign in.
-- As a teacher, I want to be able to change password.
-- As a teacher, I want to be able to sign out.
-- As a teacher, I want to add to my student roster.
-- As a teacher, I want to update individual students in my roster.
-- As a teacher, I want to delete individual students from my roster.
-
-- As a teacher, I want to add notes on my check-ins with each student.
+- As a teacher, I want to sign in/up
+- As a teacher, I want to Create a new student in my roster.
+- As a teacher, I want to Read multiple student names.
+- As a teacher, I want to Read a single note for a student.
+- As a teacher, I want to Update a student I own in my roster.
+- As a teacher, I want to Delete a student I own in my roster.
+- As a teacher, I want to Create a check-in note for each student.
+- As a teacher, I want to Read a check-in note for each student. 
+- As a teacher, I want to Read multiple check-in notes for each student.
+- As a teacher, I want to Update a check-in note for each student.
+- As a teacher, I want to Delete a check-in note for each student.
 - As a teacher, I want to see which students have had check-ins (notes added).
 - As a teacher, I want to see which students have not had check-ins (no notes added).
 
