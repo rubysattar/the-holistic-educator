@@ -4,6 +4,13 @@ const getFormFields = require('../../../lib/get-form-fields')
 const ui = require('./auth_ui')
 const store = require('../store')
 
+const authEventsListeners = function () {
+$('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#change-password').on('submit', authEvents.onChangePassword)
+  $('#sign-out').on('submit', authEvents.onSignOut)
+}
+
 const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
@@ -47,5 +54,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  authEventsListeners
 }
