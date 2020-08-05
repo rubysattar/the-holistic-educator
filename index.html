@@ -12,6 +12,46 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+
+      <!-- LANDING PAGE -->
+      <section id="landing-page">
+        <div id="introduction">
+          <h1>The Holistic Educator</h1>
+          <h2>T.H.E. app for building and tracking genuine connections with your students</h2>
+        </div>
+      </section>
+
+      <p id="auth-message"></p>
+
+      <div id="unauthenticated" class="container-fluid">
+        <form id= "sign-up">
+          <h4>New to this site? Sign-up!</h4>
+          <input name="credentials[email]" type="email" placeholder= "Your email">
+          <input name="credentials[password]" type="password" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+          <button type="submit">Sign up!</button>
+        </form>
+        <form id= "sign-in"> 
+          <h4>Already signed up? Sign-in!</h4>
+          <input name="credentials[email]" type="email" placeholder= "Your email">
+          <input name="credentials[password]" type="password" placeholder="Password">
+          <button type="submit">Sign in!</button>
+        </form>
+      </div>
+
+      <!-- END OF LAANDING PAGE -->
+
+      <div id="authenticated" class="container-fluid">
+        <form id="change-password">
+          <h4> Want to change your password?</h4>
+          <input name="passwords[old]" type="password" placeholder="Old password">
+          <input name="passwords[new]" type="password" placeholder="New password">
+          <button type="submit">Change Password!</button>
+        </form>
+        <form id= "sign-out">
+          <button id="sign-out-button" type="submit">Sign out!</button>
+        </form>
+      </div>
+
     </body>
 </html>
