@@ -21,6 +21,7 @@ const signInSuccess = function () {
   $('#sign-out').show()
   $('#unauthenticated').hide()
   $('#landing-page').hide()
+  $('main').show()
 }
 const signInFailure = function (errorMessage) {
   if (errorMessage) {

@@ -5,10 +5,13 @@ const ui = require('./auth_ui')
 const store = require('../store')
 
 const authEventsListeners = function () {
-$('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#sign-up').on('submit', onSignUp)
+  $('#sign-in').on('submit', onSignIn)
+  $('#change-password').on('submit', onChangePassword)
+  $('#change-password').hide()
+  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').hide()
+  $('main').hide()
 }
 
 const onSignUp = function (event) {
