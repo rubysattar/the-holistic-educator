@@ -25,12 +25,12 @@ const createStudents = function (formData) {
     data: formData
   })
 }
-const deleteStudent = function () {
+const deleteStudent = function (id) {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/students/' + store.students._id,
+    url: config.apiUrl + '/students/' + id,
     method: 'DELETE'
   })
 }

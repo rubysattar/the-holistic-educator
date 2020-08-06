@@ -8,17 +8,19 @@ const studentsEventsListeners = function () {
   $('#students-list').on('click', '.delete-student', onDeleteStudent)
   $('#students-list').on('click', '.update-student', onPatchStudent)
 }
+
+// not deleting a single student correctly, maybe syntax issue
 const onDeleteStudent = (event) => {
   event.preventDefault()
-  // event.target.data('_id')
-  api.deleteStudent()
+  const id = $(event.currentTarget).data('id')
+  api.deleteStudent(id)
     .then(console.log('deleted student successfully'))
     .catch(console.error)
 }
 
 const onPatchStudent = (event) => {
   event.preventDefault()
-  event.target.data('_id')
+  event.currentTarget.data('id')
   api.deleteStudent()
     .then(console.log('deleted student successfully'))
     .catch(console.error)

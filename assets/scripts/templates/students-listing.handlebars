@@ -1,6 +1,6 @@
 {{#each students as |student|}}
-  {{!-- {{log student}} --}}
   <li data-id="{{student.id}}">
+  {{!-- {{log student.id}} --}}
     <p><strong>Name:</strong>
       {{#if student.name}}
         {{student.name}}
@@ -22,8 +22,8 @@
         No note provided.
       {{/if}}
     </p>
-      <button class="update-student" data-id="{{student._id}}">Update this student</button>
-      <button class="delete-student" data-id="{{student._id}}">Delete this student</button>
+      <button class="update-student" data-id="{{student.id}}">Update this student</button>
+      <button class="delete-student" data-id="{{student.id}}">Delete this student</button>
     {{!-- {{> partial}} --}}
   </li>
 
