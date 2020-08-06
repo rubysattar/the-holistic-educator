@@ -25,6 +25,9 @@ const createStudents = function (formData) {
     data: formData
   })
 }
+
+// not deleting a single student correctly, maybe syntax issue
+// 422 unprocessable
 const deleteStudent = function (id) {
   return $.ajax({
     headers: {
