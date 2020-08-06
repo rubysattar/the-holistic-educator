@@ -1,31 +1,31 @@
 {{#each students as |student|}}
-  {{log student}}
-  <section data-id="{{student.id}}">
-    <h6>Name:</h6>
-     <p>
+  {{!-- {{log student}} --}}
+  <li data-id="{{student.id}}">
+    <p><strong>Name:</strong>
       {{#if student.name}}
         {{student.name}}
       {{else}}
         No name provided.
       {{/if}}
-    <h6>Grade:</h6>
-    <p>
+    </p>
+    <p><strong>Grade:</strong>
       {{#if student.grade}}
         {{student.grade}}
       {{else}}
         No grade level provided.
       {{/if}}
     </p>
-    <h6>Check-in note:</h6>
-    <p>
+    <p><strong>Check-in note:</strong>
       {{#if student.checkedIn}}
         {{student.checkedIn}}
       {{else}}
         No note provided.
       {{/if}}
     </p>
+      <button class="update-student">Update this student</button>
+      <button class="delete-student">Delete this student</button>
     {{!-- <button type="submit" class="btn btn-danger delete-student">Remove</button> --}}
     {{!-- {{> partial}} --}}
-  </section>
+  </li>
 
 {{/each}}

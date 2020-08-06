@@ -36,7 +36,7 @@ const changePasswordFailure = function () {
   $('form').trigger('reset')
 }
 const changePasswordSuccess = function () {
-  $('#auth-message').text('Successfully changed your password! You can change it again or scroll down and start playing!')
+  $('#auth-message').text('Successfully changed your password! You can change it again or continue to the site.')
   $('form').trigger('reset')
 }
 const signOutSuccess = function () {
