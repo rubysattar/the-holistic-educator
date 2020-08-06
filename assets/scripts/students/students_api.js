@@ -2,7 +2,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const getStudents = function () {
+const getStudents = function (data) {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token

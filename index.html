@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>The Holistic Educator</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -68,20 +68,21 @@
           <h4>Add a student to your roster.</h4>
           <!-- I might want these fields to show only if 'add a student to your roster', a button, is selected -->
           <label for="name">Student Name:</label>
-          <input type="text" placeholder="student name">
+          <input name="student[name]" type="text" placeholder="student name">
           <br>
           <label for="name">Student Grade level:</label>
-          <input type="text" placeholder="example: 'first'">
+          <input name="student[grade]" type="text" placeholder="example: 'first'">
           <br>
           <label for="name">Student check-in notes:</label>
-          <input type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
+          <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
           <br>
-          <button id="add-new-student">Add Student</button>
+          <button id="add-new-student" type="submit">Add Student</button>
+          <p id="student-create-message"></p>
         </form>
-
-        <ul id="students">
+        <button id="get-students"> Show All my Students</button>
+        <div id="students-list">
           
-        </ul>
+        </div>
 
 
       </main>
