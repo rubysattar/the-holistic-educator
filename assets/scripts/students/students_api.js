@@ -25,8 +25,36 @@ const createStudents = function (formData) {
     data: formData
   })
 }
+const deleteStudent = function () {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/students/' + store.students._id,
+    method: 'DELETE'
+  })
+}
+
+const patchStudent = function (name, grade, checkedIn) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    url: config.apiUrl + '/students/' + store.students._id,
+    method: 'PATCH',
+    data: {
+      student: {
+        name: name,
+        grade: grade,
+        checkedIn: checkedIn
+      }
+    }
+  })
+}
 
 module.exports = {
   getStudents,
-  createStudents
+  createStudents,
+  deleteStudent,
+  patchStudent
 }

@@ -22,9 +22,8 @@
         No note provided.
       {{/if}}
     </p>
-      <button class="update-student">Update this student</button>
-      <button class="delete-student">Delete this student</button>
-    {{!-- <button type="submit" class="btn btn-danger delete-student">Remove</button> --}}
+      <button class="update-student" data-id="{{student._id}}">Update this student</button>
+      <button class="delete-student" data-id="{{student._id}}">Delete this student</button>
     {{!-- {{> partial}} --}}
   </li>
 

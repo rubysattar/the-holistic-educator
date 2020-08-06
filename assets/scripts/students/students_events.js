@@ -5,6 +5,23 @@ const getFormFields = require('../../../lib/get-form-fields')
 const studentsEventsListeners = function () {
   $('#get-students').on('click', onGetStudents)
   $('#student-create').on('submit', onCreateStudent)
+  $('#students-list').on('click', '.delete-student', onDeleteStudent)
+  $('#students-list').on('click', '.update-student', onPatchStudent)
+}
+const onDeleteStudent = (event) => {
+  event.preventDefault()
+  // event.target.data('_id')
+  api.deleteStudent()
+    .then(console.log('deleted student successfully'))
+    .catch(console.error)
+}
+
+const onPatchStudent = (event) => {
+  event.preventDefault()
+  event.target.data('_id')
+  api.deleteStudent()
+    .then(console.log('deleted student successfully'))
+    .catch(console.error)
 }
 
 const onGetStudents = (event) => {
