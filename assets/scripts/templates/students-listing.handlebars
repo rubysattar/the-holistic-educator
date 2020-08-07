@@ -22,8 +22,21 @@
         No note provided.
       {{/if}}
     </p>
-      <button class="update-student" data-id="{{student._id}}">Update this student</button>
-      <button class="delete-student" data-id="{{student._id}}">Delete this student</button>
+    <form id="student-update">
+      <label for="name"><em>Student Name:</em></label>
+      <input name="student[name]" type="text" placeholder="student name">
+      <br>
+      <label for="name"><em>Student Grade level:</em></label>
+      <input name="student[grade]" type="text" placeholder="example: 'first'">
+      <br>
+      <label for="name"><em>check-in notes:</em></label>
+      <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
+      <br>
+      <button class="update-student-button" data-id="{{student._id}}">Update this student</button>
+      <p id="student-update-message"></p>
+    </form>
+      {{!-- <button class="update-student" data-id="{{student._id}}">Update this student</button> --}}
+    <button class="delete-student" data-id="{{student._id}}">Delete this student</button>
     {{!-- {{> partial}} --}}
   </li>
 
