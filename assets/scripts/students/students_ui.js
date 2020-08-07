@@ -13,9 +13,17 @@ const createStudentSuccess = () => {
 const createStudentFailure = () => {
   $('#student-create-message').text('Student could not be added to your roster.')
 }
+const deleteStudentSuccess = () => {
+  $('#student-delete-message').text('Student deleted from your roster!')
+}
+const deleteStudentFailure = () => {
+  $('#student-delete-message').text('Student was not deleted from your roster.')
+}
 
 module.exports = {
   getStudentsSuccess,
   createStudentFailure,
-  createStudentSuccess
+  createStudentSuccess,
+  deleteStudentSuccess,
+  deleteStudentFailure
 }

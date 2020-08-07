@@ -14,13 +14,13 @@ const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
   api.deleteStudent(id)
-    .then()
-    .catch(console.error)
+    .then(ui.deleteStudentSuccess)
+    .catch(ui.deleteStudentFailure)
 }
 
 const onPatchStudent = (event) => {
   event.preventDefault()
-  const id = $('event.currentTarget').data('id')
+  const id = $(event.currentTarget).data('id')
   api.patchStudent(id)
     .then(console.log('updated student successfully'))
     .catch(console.error)
