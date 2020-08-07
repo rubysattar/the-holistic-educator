@@ -5,6 +5,7 @@ const showStudentsTemplate = require('../templates/students-listing.handlebars')
 
 const studentId = showStudentsTemplate.student
 
+// INDEX WORKS
 const getStudents = function (data) {
   return $.ajax({
     headers: {
@@ -18,6 +19,7 @@ const getStudents = function (data) {
   })
 }
 
+// CREATE WORKS however, i want it to exist in handlebars like index, update, and delete
 const createStudents = function (formData) {
   return $.ajax({
     headers: {
@@ -29,8 +31,7 @@ const createStudents = function (formData) {
   })
 }
 
-// not deleting a single student correctly, maybe syntax issue
-// 422 unprocessable
+// DELETE WORKS
 const deleteStudent = function (studentId) {
   // console.log(id)  returns undefined
   return $.ajax({
@@ -42,6 +43,7 @@ const deleteStudent = function (studentId) {
   })
 }
 
+// NOT WORKING
 const patchStudent = function (name, grade, checkedIn) {
   return $.ajax({
     headers: {

@@ -9,8 +9,6 @@ const studentsEventsListeners = function () {
   $('#students-list').on('click', '.update-student', onPatchStudent)
 }
 
-// not deleting a single student correctly, maybe syntax issue
-// 422 unprocessable
 const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
