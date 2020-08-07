@@ -46,6 +46,7 @@ const signOutSuccess = function () {
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#landing-page').show()
+  $('main').hide()
   store.user = null
 }
 const signOutFailure = function () {

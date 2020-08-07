@@ -44,20 +44,14 @@ const deleteStudent = function (studentId) {
 }
 
 // NOT WORKING
-const patchStudent = function (studentId, name, grade, checkedIn) {
+const patchStudent = function (studentId, formData) {
   return $.ajax({
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     url: config.apiUrl + '/students/' + studentId,
     method: 'PATCH',
-    data: {
-      student: {
-        name: name,
-        grade: grade,
-        checkedIn: checkedIn
-      }
-    }
+    data: formData
   })
 }
 

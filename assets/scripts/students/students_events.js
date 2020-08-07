@@ -6,7 +6,7 @@ const studentsEventsListeners = function () {
   $('#get-students').on('click', onGetStudents)
   $('#student-create').on('submit', onCreateStudent)
   $('#students-list').on('click', '.delete-student', onDeleteStudent)
-  $('#students-list').on('click', '.update-student', onPatchStudent)
+  $('#students-list').on('click', '.update-student-button', onPatchStudent)
 }
 
 // NEED TO COME BACK AND ENTER UI that considers hiding the deleted student
@@ -20,8 +20,16 @@ const onDeleteStudent = (event) => {
 
 const onPatchStudent = (event) => {
   event.preventDefault()
-  const id = $(event.currentTarget).data('id')
-  api.patchStudent(id)
+  const studentId = $(event.currentTarget).data('id')
+  const form = $(event.currentTarget).closest('.student-update')[0]
+  // [0] tells jquery we want the first element that comes back with this selector
+  // console.log({ form })
+
+  const formData = getFormFields(form)
+
+  // console.log({ formData })
+
+  api.patchStudent(studentId, formData)
     .then(console.log('updated student successfully'))
     .catch(console.error)
 }
