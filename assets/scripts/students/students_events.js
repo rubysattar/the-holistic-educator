@@ -9,19 +9,20 @@ const studentsEventsListeners = function () {
   $('#students-list').on('click', '.update-student', onPatchStudent)
 }
 
+// NEED TO COME BACK AND ENTER UI that considers hiding the deleted student
 const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
   api.deleteStudent(id)
-    .then(console.log('deleted student successfully'))
+    .then()
     .catch(console.error)
 }
 
 const onPatchStudent = (event) => {
   event.preventDefault()
-  event.currentTarget.data('id')
-  api.deleteStudent()
-    .then(console.log('deleted student successfully'))
+  const id = $('event.currentTarget').data('id')
+  api.patchStudent(id)
+    .then(console.log('updated student successfully'))
     .catch(console.error)
 }
 
@@ -32,6 +33,7 @@ const onGetStudents = (event) => {
     .catch(ui.getStudentsFailure)
 }
 
+// NEED TO COME BACK AND ENTER UI that considers showing the created student
 const onCreateStudent = (event) => {
   event.preventDefault()
   const form = event.target
