@@ -1,6 +1,9 @@
 'use strict'
 const config = require('../config')
 const store = require('../store')
+const showStudentsTemplate = require('../templates/students-listing.handlebars')
+
+const studentId = showStudentsTemplate.student
 
 const getStudents = function (data) {
   return $.ajax({
@@ -28,12 +31,13 @@ const createStudents = function (formData) {
 
 // not deleting a single student correctly, maybe syntax issue
 // 422 unprocessable
-const deleteStudent = function (id) {
+const deleteStudent = function (studentId) {
+  // console.log(id)  returns undefined
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/students/' + id,
+    url: config.apiUrl + '/students/' + studentId,
     method: 'DELETE'
   })
 }

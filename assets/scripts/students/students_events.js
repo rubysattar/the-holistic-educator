@@ -13,7 +13,7 @@ const studentsEventsListeners = function () {
 // 422 unprocessable
 const onDeleteStudent = (event) => {
   event.preventDefault()
-  const id = $(event.currentTarget).data('_id')
+  const id = $(event.currentTarget).data('id')
   api.deleteStudent(id)
     .then(console.log('deleted student successfully'))
     .catch(console.error)
