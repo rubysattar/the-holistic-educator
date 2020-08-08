@@ -14,6 +14,9 @@ const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
   api.deleteStudent(id)
+    // trigger the updated list to show
+    // not dynamically removing the student, have to index again to prove deletion
+    .then($('#get-students').trigger('click', onGetStudents))
     .then(ui.deleteStudentSuccess)
     .catch(ui.deleteStudentFailure)
 }
@@ -30,8 +33,8 @@ const onPatchStudent = (event) => {
   // console.log({ formData })
 
   api.patchStudent(studentId, formData)
-    .then(console.log('updated student successfully'))
-    .catch(console.error)
+    .then(ui.updateStudentSuccess)
+    .catch(ui.updateStudentFailure)
 }
 
 const onGetStudents = (event) => {
@@ -47,6 +50,10 @@ const onCreateStudent = (event) => {
   const form = event.target
   const formData = getFormFields(form)
   api.createStudents(formData)
+    // .then((newlyCreatedStudent) => {
+    //   ui.appendStudent(newlyCreatedStudent)
+    // })
+    .then($('#get-students').trigger('click', onGetStudents))
     .then(ui.createStudentSuccess)
     .catch(ui.createStudentFailure)
 }

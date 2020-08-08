@@ -3,8 +3,8 @@
 const showStudentsTemplate = require('../templates/students-listing.handlebars')
 
 const getStudentsSuccess = (data) => {
-  // console.log(data)
   const showStudentsHtml = showStudentsTemplate({ students: data.students })
+  // console.log(data)
   $('#students-list').html(showStudentsHtml)
 }
 const createStudentSuccess = () => {
@@ -19,11 +19,22 @@ const deleteStudentSuccess = () => {
 const deleteStudentFailure = () => {
   $('#student-delete-message').text('Student was not deleted from your roster.')
 }
+const updateStudentSuccess = () => {
+  $('#student-update-message').text('Student updated!')
+}
+const updateStudentFailure = () => {
+  $('#student-update-message').text('Student was not updated.')
+}
+// const appendStudent = (newStudent) => {
+//   $('#students-list').html(showStudentsHtml.append(newStudent))
+// }
 
 module.exports = {
   getStudentsSuccess,
   createStudentFailure,
   createStudentSuccess,
   deleteStudentSuccess,
-  deleteStudentFailure
+  deleteStudentFailure,
+  updateStudentFailure,
+  updateStudentSuccess
 }

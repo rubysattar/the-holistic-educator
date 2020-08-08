@@ -1,12 +1,14 @@
 # The Holistic Educator - front end application
 
-- The final version of this project will be an application that tracks connections teachers make with students to inform the support they provide students for social-emotional development or behavioral concerns.
+- The final version of this project will be an application that: 
+1. Tracks connections teachers make with students (i.e. a teacher would be able to see who she has checked in with or not 'today').
+2. Informs teachers of the supports needed to fulfill social-emotional needs (key word filters would suggest books or web resources).
 - This project is near and dear to me as a huge advocate for social-emotional learning in schools. This application is a tool that many teachers who are tracking their connections with students will find helpful to ensure that they are reaching every student. 
 
 ## Important Links
 
 - [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
+- [Deployed API](https://whispering-anchorage-25173.herokuapp.com)
 - [Deployed Client](www.link.com)
 
 ## Planning Story
@@ -14,7 +16,9 @@
 [Results from my teacher poll conducted on instagram](https://imgur.com/dVmMwMG)
 
 - The first step in my planning process was to do market research. I asked other teachers about tools they wished to have in the classroom. Most teachers polled said they would like a way to keep track of which students with whom they have had check-ins.
-- Next,
+- Next, I broke down my application into versions and focused on the first version, which would require just one resource to which I'd apply CRUD actions - a student roster (including an option for a single note to be added to each student.)
+- Starting with the back-end API, I routed my user and student resources, wrote curl scripts, and tested their accuracy in the development server. 
+- Upon success using CRUD actions on these resources in the back-end, I moved onto connecting my back-end to a front-end client server, using Handlebars to display the most relevant data for the user as the user would apply CRUD actions through the front-end. 
 
 ### User Stories
 
@@ -41,7 +45,7 @@
 
 ### Unsolved Problems
 
-- Still need to ....
+- Still need to ... have deletions apply dynamically in the UI (If I'm deleting a student while indexing all of them, I want to see that the deleted student has immediately disappeared without re-indexing).
 - Would like to eventually ....
 
 ## Images
