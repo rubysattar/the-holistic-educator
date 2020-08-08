@@ -8,9 +8,9 @@ const authEventsListeners = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
-  $('#change-password').hide()
+  $('.change-password').hide()
   $('#sign-out').on('submit', onSignOut)
-  $('#sign-out').hide()
+  $('.sign-out').hide()
   $('main').hide()
 }
 

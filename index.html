@@ -14,78 +14,134 @@
     <body>
 
       <!-- LANDING PAGE -->
-      <section id="landing-page">
-        <div id="introduction">
-          <h1>The Holistic Educator</h1>
-          <h2>T.H.E. app for building and tracking genuine connections with your students</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <section id="landing-page">
+            <div id="introduction">
+              <h1>The Holistic Educator</h1>
+              <h2>T.H.E. app for building and tracking genuine connections with your students</h2>
+            </div>
+          </section>
         </div>
-      </section>
-
-      <p id="auth-message"></p>
-
-      <div id="unauthenticated" class="container-fluid">
-        <form id= "sign-up">
-          <h4>New to this site? Sign-up!</h4>
-          <input name="credentials[email]" type="email" placeholder= "Your email">
-          <br>
-          <input name="credentials[password]" type="password" placeholder="Password">
-          <br>
-          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
-          <br>
-          <button type="submit">Sign up!</button>
-        </form>
-        <form id= "sign-in"> 
-          <h4>Already signed up? Sign-in!</h4>
-          <input name="credentials[email]" type="email" placeholder= "Your email">
-          <br>
-          <input name="credentials[password]" type="password" placeholder="Password">
-          <br>
-          <button type="submit">Sign in!</button>
-        </form>
       </div>
+    </div>
+
+      <div class="container">
+      
+        <p id="auth-message"></p>
+        <div class="row" id="unauthenticated">
+
+          <div class="col-6">
+            <div class="card sign-up">
+              <div class="card-body">
+                <form id= "sign-up">
+                  <h4 class="card-title">New to this site? Sign-up!</h4>
+                  <input name="credentials[email]" type="email" placeholder= "Your email">
+                  <br>
+                  <input name="credentials[password]" type="password" placeholder="Password">
+                  <br>
+                  <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+                  <br>
+                  <button class="btn btn-success" type="submit">Sign up!</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card sign-in">
+              <div class="card-body">
+                <form id= "sign-in"> 
+                  <h4 class="card-title">Already signed up? Sign-in!</h4>
+                  <input name="credentials[email]" type="email" placeholder= "Your email">
+                  <br>
+                  <input name="credentials[password]" type="password" placeholder="Password">
+                  <br>
+                  <button class="btn btn-success" type="submit">Sign in!</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  
+      </div> 
 
       <!-- END OF LAANDING PAGE -->
 
-      <div id="authenticated" class="container-fluid">
-        <form id="change-password">
-          <h4> Want to change your password?</h4>
-          <input name="passwords[old]" type="password" placeholder="Old password">
-          <br>
-          <input name="passwords[new]" type="password" placeholder="New password">
-          <br>
-          <button type="submit">Change Password!</button>
-        </form>
-        <form id= "sign-out">
-          <button id="sign-out-button" type="submit">Sign out!</button>
-        </form>
+      <div class="container">
+        <div class="row" id="authenticated">
+
+          <div class="col-6">
+            <div class="card change-password">
+              <div class="card-body">
+                <form id="change-password">
+                  <h4 class="card-title"> Want to change your password?</h4>
+                  <input name="passwords[old]" type="password" placeholder="Old password">
+                  <br>
+                  <input name="passwords[new]" type="password" placeholder="New password">
+                  <br>
+                  <button type="submit">Change Password!</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card sign-out">
+              <div class="card-body">
+                <form id= "sign-out">
+                  <button id="sign-out-button" type="submit">Sign out!</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <!-- ACCESSING STUDENT ROSTER -->
 
       <!-- think of it like a shopping cart, you can add and it saves to your roster -->
       <main>
-        
-        <form id="student-create">
-          <h4>Add a student to your roster.</h4>
-          <!-- I might want these fields to show only if 'add a student to your roster', a button, is selected -->
-          <label for="name">Student Name:</label>
-          <input name="student[name]" type="text" placeholder="student name">
-          <br>
-          <label for="name">Student Grade level:</label>
-          <input name="student[grade]" type="text" placeholder="example: 'first'">
-          <br>
-          <label for="name">Student check-in notes:</label>
-          <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
-          <br>
-          <button id="add-new-student" type="submit">Add Student</button>
-          <p id="student-create-message"></p>
-        </form>
-        <button id="get-students"> Show All my Students</button>
-        <ol id="students-list">
-        </ol>
-        <p id="student-update-message"></p>
-        <p id="student-delete-message"></p>
+        <div class="container">
+          <div>
+            <p id="student-update-message"></p>
+            <p id="student-delete-message"></p>
+          </div>
+          <div class="row">
 
+              <div class="card col-lg-6">
+                <div class="card-body">
+                  <form id="student-create">
+                      <h4 class="card-title">Add a student to your roster.</h4>
+                      <!-- I might want these fields to show only if 'add a student to your roster', a button, is selected -->
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Student Name</li>
+                        <input name="student[name]" type="text" placeholder="student name">
+                        <br>
+                        <li class="list-group-item">Student Grade</li>
+                        <input name="student[grade]" type="text" placeholder="example: 'first'">
+                        <br>
+                        <li class="list-group-item">Check-in note</li>
+                        <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
+                        <br>
+                      </ul>
+                      <button id="add-new-student" type="submit">Add Student</button>
+                      <p id="student-create-message"></p>
+                  </form>
+                </div>
+              </div>
+
+              
+                <!-- get-students should probably be its own tab -->
+                <button id="get-students"> Show All my Students</button>
+                <div class="col-lg-6" id="students-list">
+                </div>
+              
+          </div>
+        </div>
       </main>
     </body>
 </html>

@@ -3,22 +3,22 @@ const store = require('../store')
 
 const signUpSuccess = function () {
   $('#auth-message').text('Sign-up was successful!')
-  $('#sign-up').hide()
+  $('.sign-up').hide()
   $('form').trigger('reset')
-  $('#sign-in').show()
+  $('.sign-in').show()
 }
 
 const signUpFailure = function () {
   $('#auth-message').text('Sign-up was unsuccessful. Try again.')
-  $('#sign-up').show()
+  $('.sign-up').show()
   $('form').trigger('reset')
 }
 
 const signInSuccess = function () {
   $('#auth-message').text('Sign-in was successful!')
   $('form').trigger('reset')
-  $('#change-password').show()
-  $('#sign-out').show()
+  $('.change-password').show()
+  $('.sign-out').show()
   $('#unauthenticated').hide()
   $('#landing-page').hide()
   $('main').show()
@@ -43,8 +43,8 @@ const signOutSuccess = function () {
   $('#auth-message').text('You are now signed out!')
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#change-password').hide()
-  $('#sign-out').hide()
+  $('.change-password').hide()
+  $('.sign-out').hide()
   $('#landing-page').show()
   $('main').hide()
   store.user = null

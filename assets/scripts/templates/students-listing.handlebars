@@ -1,44 +1,52 @@
 {{#each students as |student|}}
-  <li data-id="{{student._id}}">
-  {{!-- {{log student._id}} --}}
-    <p><strong>Name:</strong>
-      {{#if student.name}}
-        {{student.name}}
-      {{else}}
-        No name provided.
-      {{/if}}
-    </p>
-    <p><strong>Grade:</strong>
-      {{#if student.grade}}
-        {{student.grade}}
-      {{else}}
-        No grade level provided.
-      {{/if}}
-    </p>
-    <p><strong>Check-in note:</strong>
-      {{#if student.checkedIn}}
-        {{student.checkedIn}}
-      {{else}}
-        No note provided.
-      {{/if}}
-    </p>
-    <form class="student-update">
-      <label for="name"><em>Student Name:</em></label>
-      <input name="student[name]" type="text" placeholder="student name">
-      <br>
-      <label for="name"><em>Student Grade level:</em></label>
-      <input name="student[grade]" type="text" placeholder="example: 'first'">
-      <br>
-      <label for="name"><em>check-in notes:</em></label>
-      <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
-      <br>
-      <button class="update-student-button" data-id="{{student._id}}">Update this student</button>
+
+<div class="card">
+  <div class="card-body">
+    <ol class="list-group list-group-flush">
+    <li class="list-group-item" data-id="{{student._id}}">
+    {{!-- {{log student._id}} --}}
+      <p><strong>Name:</strong>
+        {{#if student.name}}
+          {{student.name}}
+        {{else}}
+          No name provided.
+        {{/if}}
+      </p>
+      <p><strong>Grade:</strong>
+        {{#if student.grade}}
+          {{student.grade}}
+        {{else}}
+          No grade level provided.
+        {{/if}}
+      </p>
+      <p><strong>Check-in note:</strong>
+        {{#if student.checkedIn}}
+          {{student.checkedIn}}
+        {{else}}
+          No note provided.
+        {{/if}}
+      </p>
+      <form class="student-update">
+        <label for="name"><em>Student Name:</em></label>
+        <input name="student[name]" type="text" placeholder="student name">
+        <br>
+        <label for="name"><em>Student Grade level:</em></label>
+        <input name="student[grade]" type="text" placeholder="example: 'first'">
+        <br>
+        <label for="name"><em>check-in notes:</em></label>
+        <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
+        <br>
+        <button class="update-student-button btn btn-primary" data-id="{{student._id}}">Update this student</button>
+        
+      </form>
+        {{!-- <button class="update-student" data-id="{{student._id}}">Update this student</button> --}}
       
-    </form>
-      {{!-- <button class="update-student" data-id="{{student._id}}">Update this student</button> --}}
-    
-    <button class="delete-student" data-id="{{student._id}}">Delete this student</button>
-    {{!-- {{> partial}} --}}
-  </li>
+      <button class="delete-student btn btn-danger" data-id="{{student._id}}">Delete this student</button>
+      {{!-- {{> partial}} --}}
+    </li>
+    </ol>
+  </div>
+</div>
+
 
 {{/each}}
