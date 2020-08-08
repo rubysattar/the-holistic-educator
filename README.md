@@ -1,9 +1,15 @@
 # The Holistic Educator - front end application
 
 - The final version of this project will be an application that: 
-1. Tracks connections teachers make with students (i.e. a teacher would be able to see who she has checked in with or not 'today').
+1. Tracks connections teachers make with students (i.e. a teacher would be able to see who she/he/they has checked in with or not 'today').
 2. Informs teachers of the supports needed to fulfill social-emotional needs (key word filters would suggest books or web resources).
 - This project is near and dear to me as a huge advocate for social-emotional learning in schools. This application is a tool that many teachers who are tracking their connections with students will find helpful to ensure that they are reaching every student. 
+
+## How does it work?
+
+- A teacher signs in, selects the Student Roster tab.
+- A teacher can index all of her/his/their students to see relevant data about each of her/his/their students.
+- A teacher can then choose to update or delete an existing student and/or create a new student.
 
 ## Important Links
 
@@ -46,11 +52,12 @@
 ### Unsolved Problems
 
 - Still need to ... have deletions apply dynamically in the UI (If I'm deleting a student while indexing all of them, I want to see that the deleted student has immediately disappeared without re-indexing).
-- Would like to eventually ....
+- Would like to eventually .... add other tabs for other features. A tab for "check-in status", for example, would render options for a teacher to "view who I have checked-in with today" and "who I have not checked-in with today". Another tab for "suggested resources" would allow a teacher to select ant student to render a displayed list of suggested social-emotional learning resources.
 
 ## Images
 
 #### Wireframe:
+- [updated application wireframe](https://imgur.com/viNGzwH)
 - [initial landing page wireframe](https://imgur.com/HANqQFv)
 - [initial application wireframe](https://imgur.com/fbpXkYj)
 ---
