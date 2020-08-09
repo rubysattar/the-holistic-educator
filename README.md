@@ -21,10 +21,10 @@
 
 [Results from my teacher poll conducted on instagram](https://imgur.com/dVmMwMG)
 
-- The first step in my planning process was to do market research. I asked other teachers about tools they wished to have in the classroom. Most teachers polled said they would like a way to keep track of which students with whom they have had check-ins.
-- Next, I broke down my application into versions and focused on the first version, which would require just one resource to which I'd apply CRUD actions - a student roster (including an option for a single note to be added to each student.)
+- The first step in my planning process was to conduct market research. I asked other teachers about tools they wished to have in the classroom. Most teachers polled said they would like a way to keep track of the students with whom they have had check-ins.
+- Next, I broke down my application into several versions and focused on the first approachable version, which would require just one resource to which I'd apply CRUD actions - a student roster (including an option for a single note to be added to each student.)
 - Starting with the back-end API, I routed my user and student resources, wrote curl scripts, and tested their accuracy in the development server. 
-- Upon success using CRUD actions on these resources in the back-end, I moved onto connecting my back-end to a front-end client server, using Handlebars to display the most relevant data for the user as the user would apply CRUD actions through the front-end. 
+- Upon success using CRUD actions on these resources in the back-end, I moved onto connecting my back-end to a front-end client server, using Handlebars to display the most relevant data for the user to apply CRUD actions through the front-end. 
 
 ### User Stories
 
