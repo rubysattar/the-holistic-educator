@@ -14,6 +14,7 @@
     <body>
 
       <!-- LANDING PAGE -->
+  <div class="landing-page">
     <div class="container">
       <div class="row" id="landing-page">
         <div class="col-sm-12">
@@ -29,7 +30,7 @@
 
       <div class="container">
       
-        <p id="auth-message"></p>
+        <p id="unauth-message"></p>
         <div class="row" id="unauthenticated">
 
           <div class="col-sm-6">
@@ -67,12 +68,11 @@
         </div>
   
       </div> 
-
+    </div>
       <!-- END OF LAANDING PAGE -->
       
 
-      <div class="container">
-        <div class="row" id="authenticated">
+      
 
           <!-- <div class="col-sm-6">
             <div class="card change-password">
@@ -99,12 +99,9 @@
             </div>
           </div>  -->
 
-        </div>
-      </div>
+        
 
       <!-- ACCESSING STUDENT ROSTER -->
-
-      <!-- think of it like a shopping cart, you can add and it saves to your roster -->
       <main>
 
         <!-- MY GET STUDENT-LISTING TEMPLATE CAN INSTEAD BE A 'VIEW' TRIGGERED BY A NAV LINK RATHER THAN A BUTTON -->
@@ -160,12 +157,12 @@
           </div>
         </nav>
 
+        <p id="auth-message"></p>
 
         <!-- THE CREATE STUDENT CAN BE WITHIN ANOTHER HANDLEBAR TEMPLATE THAT IS ALSO TRIGGERED BY A NAV LINK -->
         <div class="container student-roster-view">
           <div>
-            <p id="student-update-message"></p>
-            <p id="student-delete-message"></p>
+            <p id="student-message"></p>
           </div>
           <div class="row">
 
@@ -182,7 +179,7 @@
                         <input name="student[grade]" type="text" placeholder="'first'">
                         <br>
                         <li class="list-group-item">Check-in note:</li>
-                        <input name="student[checkedIn]" type="text" placeholder="'Jane said she's excited about her new fish'">
+                        <input name="student[checkedIn]" type="text" placeholder="'Jane said she's excited about her latest adventure.'">
                         <br>
                       </ul>
                       <button class="btn btn-info" id="add-new-student" type="submit">Add Student</button>

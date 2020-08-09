@@ -2,14 +2,14 @@
 const store = require('../store')
 
 const signUpSuccess = function () {
-  $('#auth-message').text('Sign-up was successful!')
+  $('#unauth-message').text('Sign-up was successful!')
   $('.sign-up').hide()
   $('form').trigger('reset')
   $('.sign-in').show()
 }
 
 const signUpFailure = function () {
-  $('#auth-message').text('Sign-up was unsuccessful. Try again.')
+  $('#unauth-message').text('Sign-up was unsuccessful. Try again.')
   $('.sign-up').show()
   $('form').trigger('reset')
 }
@@ -25,9 +25,9 @@ const signInSuccess = function () {
 }
 const signInFailure = function (errorMessage) {
   if (errorMessage) {
-    $('#auth-message').text(`Sign-in failed. Reason: ${errorMessage}`)
+    $('#unauth-message').text(`Sign-in failed. Reason: ${errorMessage}`)
   } else {
-    $('#auth-message').text('Sign-in failed.')
+    $('#unauth-message').text('Sign-in failed.')
   }
   $('form').trigger('reset')
 }
@@ -40,7 +40,7 @@ const changePasswordSuccess = function () {
   $('form').trigger('reset')
 }
 const signOutSuccess = function () {
-  $('#auth-message').text('You are now signed out!')
+  $('#unauth-message').text('You are now signed out!')
   $('#unauthenticated').show()
   $('.sign-up').show()
   $('.sign-in').show()

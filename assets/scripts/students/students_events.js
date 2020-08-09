@@ -37,6 +37,7 @@ const onPatchStudent = (event) => {
   // console.log({ formData })
 
   api.patchStudent(studentId, formData)
+    .then($('#get-students').trigger('click', onGetStudents))
     .then(ui.updateStudentSuccess)
     .catch(ui.updateStudentFailure)
 }

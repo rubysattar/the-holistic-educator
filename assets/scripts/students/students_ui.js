@@ -17,17 +17,17 @@ const createStudentFailure = () => {
   $('form').trigger('reset')
 }
 const deleteStudentSuccess = () => {
-  $('#student-delete-message').text('Student deleted from your roster!')
+  $('#student-message').text('Student deleted from your roster!')
 }
 const deleteStudentFailure = () => {
-  $('#student-delete-message').text('Student was not deleted from your roster.')
+  $('#student-message').text('Student was not deleted from your roster.')
 }
 const updateStudentSuccess = () => {
-  $('#student-update-message').text('Student updated!')
+  $('#student-message').text('Student updated!')
   $('form').trigger('reset')
 }
 const updateStudentFailure = () => {
-  $('#student-update-message').text('Student was not updated.')
+  $('#student-message').text('Student was not updated.')
 }
 // const appendStudent = (newStudent) => {
 //   $('#students-list').html(showStudentsHtml.append(newStudent))

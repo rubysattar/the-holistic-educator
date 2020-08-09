@@ -9,6 +9,13 @@ body {
     background-repeat: no-repeat;
     font-family: 'Indie Flower', cursive;
 }
+.student-create {
+    background: url('public/phone.jpg');
+    background-position: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .btn {
     
 }
@@ -31,7 +38,7 @@ h1 {
     text-align: center;
 }
 
-h1, h2, #auth-message, #student-update-message, #student-delete-message {
+h1, h2, #unauth-message, #student-message {
     color: white;
     text-align: center;
     text-shadow: 2px 2px #006400;
