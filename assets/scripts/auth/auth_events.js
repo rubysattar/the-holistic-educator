@@ -8,10 +8,14 @@ const authEventsListeners = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
-  $('.change-password').hide()
   $('#sign-out').on('submit', onSignOut)
+
+  // hide the following, unless triggered
+  $('.change-password').hide()
   $('.sign-out').hide()
   $('main').hide()
+  $('.student-roster-view').hide()
+  $('.about-view').hide()
 }
 
 const onSignUp = function (event) {

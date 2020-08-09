@@ -74,7 +74,7 @@
       <div class="container">
         <div class="row" id="authenticated">
 
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             <div class="card change-password">
               <div class="card-body">
                 <form id="change-password">
@@ -87,9 +87,9 @@
                 </form>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             <div class="card sign-out">
               <div class="card-body">
                 <form id= "sign-out">
@@ -97,7 +97,7 @@
                 </form>
               </div>
             </div>
-          </div> 
+          </div>  -->
 
         </div>
       </div>
@@ -109,7 +109,7 @@
 
         <!-- MY GET STUDENT-LISTING TEMPLATE CAN INSTEAD BE A 'VIEW' TRIGGERED BY A NAV LINK RATHER THAN A BUTTON -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">T.H.E. (logo)</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -118,7 +118,7 @@
             <ul class="navbar-nav mr-auto">
 
               <li class="nav-item active">
-                <a class="nav-link" href="#">About T.H.E. <span class="sr-only">(current)</span></a>
+                <button class="nav-link btn" id="about-button">About T.H.E. <span class="sr-only">(current)</span></button>
               </li>
 
               <li class="nav-item">
@@ -135,13 +135,23 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
+                  Change PW/Sign-out
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Change Password</a>
-                  <form id="sign-out">
-                    <button class="sign-out dropdown-item" id="sign-out-button" type="submit">Sign out</button>
+
+                  <form class="change-password dropdown-item" id="change-password">
+                    <h4 class="card-title"> Want to change your password?</h4>
+                    <input name="passwords[old]" type="password" placeholder="Old password">
+                    <br>
+                    <input name="passwords[new]" type="password" placeholder="New password">
+                    <br>
+                    <button class="btn" type="submit">Change Password!</button>
                   </form>
+                    
+                  <form class="sign-out dropdown-item" id= "sign-out">
+                    <button class="btn" id="sign-out-button" type="submit">Sign out!</button>
+                  </form>
+
                 </div>
               </li>
 
@@ -189,6 +199,12 @@
               
           </div>
         </div>
+
+        <div class="about-view">
+          <h1>What is The Holistic Educator about?</h1>
+          <p>Some text.</p>
+        </div>
+
       </main>
     </body>
 </html>
