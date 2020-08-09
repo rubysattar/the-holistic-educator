@@ -48,6 +48,7 @@
 - HTML/CSS
 - Bootstrap
 - Javascript
+- HandleBars
 
 ### Unsolved Problems
 
