@@ -27,14 +27,14 @@
         {{/if}}
       </p>
       <form class="student-update">
-        <label for="name"><em>Student Name:</em></label>
-        <input name="student[name]" type="text" placeholder="student name">
+        {{!-- <label for="name"><em>Student Name:</em></label> --}}
+        <input name="student[name]" type="text" placeholder="update student name">
         <br>
-        <label for="name"><em>Student Grade level:</em></label>
-        <input name="student[grade]" type="text" placeholder="example: 'first'">
+        {{!-- <label for="name"><em>Student Grade level:</em></label> --}}
+        <input name="student[grade]" type="text" placeholder="update grade, example: 'first'">
         <br>
-        <label for="name"><em>check-in notes:</em></label>
-        <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
+        {{!-- <label for="name"><em>check-in notes:</em></label> --}}
+        <input name="student[checkedIn]" type="text" placeholder="update note, example: 'Jimmy said he was excited about his new fish'">
         <br>
         <button class="update-student-button btn btn-info" data-id="{{student._id}}">Update this student</button>
         
