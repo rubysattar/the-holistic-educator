@@ -5,6 +5,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const studentsEventsListeners = function () {
   $('#get-students').on('click', onGetStudents)
   $('#student-create').on('submit', onCreateStudent)
+  $('#students-list').on('click', '#get-students-in-template', onGetStudents)
   $('#students-list').on('click', '.delete-student', onDeleteStudent)
   $('#students-list').on('click', '.update-student-button', onPatchStudent)
 }

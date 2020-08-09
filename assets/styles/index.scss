@@ -1,6 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-#student-update {
+body {
+    background: url('public/teach.jpg');
+    background-position: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+h1, h2, #auth-message, #student-update-message, #student-delete-message {
+    color: white;
+    text-shadow: 2px 2px #006400;
 }
