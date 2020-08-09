@@ -9,9 +9,11 @@ const getStudentsSuccess = (data) => {
 }
 const createStudentSuccess = () => {
   $('#student-create-message').text('Student added to your roster!')
+  $('form').trigger('reset')
 }
 const createStudentFailure = () => {
   $('#student-create-message').text('Student could not be added to your roster.')
+  $('form').trigger('reset')
 }
 const deleteStudentSuccess = () => {
   $('#student-delete-message').text('Student deleted from your roster!')
@@ -21,6 +23,7 @@ const deleteStudentFailure = () => {
 }
 const updateStudentSuccess = () => {
   $('#student-update-message').text('Student updated!')
+  $('form').trigger('reset')
 }
 const updateStudentFailure = () => {
   $('#student-update-message').text('Student was not updated.')
