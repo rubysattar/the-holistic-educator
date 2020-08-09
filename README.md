@@ -13,6 +13,7 @@
 
 ## Important Links
 
+- [API Repo](https://github.com/rubysattar/the-holistic-educator-api)
 - [Deployed API](https://whispering-anchorage-25173.herokuapp.com/)
 - [Deployed Client](https://rubysattar.github.io/the-holistic-educator/)
 
