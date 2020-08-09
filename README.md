@@ -52,7 +52,7 @@
 ### Unsolved Problems
 
 - Still need to ... have deletions apply dynamically in the UI (If I'm deleting a student while indexing all of them, I want to see that the deleted student has immediately disappeared without re-indexing).
-- Would like to eventually .... add other tabs for other features. 
+- Would like to eventually .... sort student list alphabetically and add other tabs for other features. 
 1. A tab for "check-in status", for example, would render options for a teacher to "view who I have checked-in with today" and "who I have not checked-in with today". 
 2. Another tab for "suggested resources" would allow a teacher to select ant student to render a displayed list of suggested social-emotional learning resources.
 3. A final tab for a "user profile" that displays user email and number of students associated with this user.
