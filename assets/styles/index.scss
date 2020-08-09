@@ -7,6 +7,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.btn {
+    
+}
+
+.card {
+    height: fit-content;
+    opacity: .8;
+}
 
 h1, h2, #auth-message, #student-update-message, #student-delete-message {
     color: white;
