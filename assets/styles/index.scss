@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
 body {
@@ -6,6 +7,7 @@ body {
     background-position: initial;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Indie Flower', cursive;
 }
 .btn {
     
@@ -16,7 +18,28 @@ body {
     opacity: .8;
 }
 
+.card-body {
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 80px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;
+}
+
 h1, h2, #auth-message, #student-update-message, #student-delete-message {
     color: white;
+    text-align: center;
     text-shadow: 2px 2px #006400;
+}
+
+input {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 5px 0;
 }
