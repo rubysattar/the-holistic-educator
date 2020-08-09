@@ -41,8 +41,7 @@ const changePasswordSuccess = function () {
 }
 const signOutSuccess = function () {
   $('#auth-message').text('You are now signed out!')
-  $('#sign-up').show()
-  $('#sign-in').show()
+  $('#unauthenticated').show()
   $('.change-password').hide()
   $('.sign-out').hide()
   $('#landing-page').show()

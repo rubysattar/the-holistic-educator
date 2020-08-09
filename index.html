@@ -15,9 +15,9 @@
 
       <!-- LANDING PAGE -->
     <div class="container">
-      <div class="row">
+      <div class="row" id="landing-page">
         <div class="col-md-12">
-          <section id="landing-page">
+          <section>
             <div id="introduction">
               <h1>The Holistic Educator</h1>
               <h2>T.H.E. app for building and tracking genuine connections with your students</h2>
@@ -82,7 +82,7 @@
                   <br>
                   <input name="passwords[new]" type="password" placeholder="New password">
                   <br>
-                  <button type="submit">Change Password!</button>
+                  <button class="btn btn-info" type="submit">Change Password!</button>
                 </form>
               </div>
             </div>
@@ -92,7 +92,7 @@
             <div class="card sign-out">
               <div class="card-body">
                 <form id= "sign-out">
-                  <button id="sign-out-button" type="submit">Sign out!</button>
+                  <button class="btn btn-danger" id="sign-out-button" type="submit">Sign out!</button>
                 </form>
               </div>
             </div>
@@ -128,7 +128,7 @@
                         <input name="student[checkedIn]" type="text" placeholder="example: 'Jimmy said he was excited about his new fish'">
                         <br>
                       </ul>
-                      <button id="add-new-student" type="submit">Add Student</button>
+                      <button class="btn btn-info" id="add-new-student" type="submit">Add Student</button>
                       <p id="student-create-message"></p>
                   </form>
                 </div>
@@ -136,8 +136,8 @@
 
               
                 <!-- get-students should probably be its own tab -->
-                <button id="get-students"> Show All my Students</button>
                 <div class="col-lg-6" id="students-list">
+                  <button class="btn btn-info" id="get-students"> Show All my Students</button>
                 </div>
               
           </div>
