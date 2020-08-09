@@ -52,7 +52,7 @@
 
 - My problem-solving strategy was to console log everything I assumed I knew about my code to be sure my code represented what I thought it did. I also used breakpoints in Dev Tools to trace functions that were running up to a certain point in my code. In addition, I tried features in other branches before merging them into the master. 
 
-- Still need to ... have deletions apply dynamically in the UI (If I'm deleting a student while indexing all of them, I want to see that the deleted student has immediately disappeared without re-indexing).
+- Still need to ... have deletions apply dynamically in the UI (If I'm deleting a student while indexing all of them, I want to see that the deleted student has immediately disappeared without re-indexing) and have success and failure feedback messages not linger.
 - Would like to eventually .... sort student list alphabetically and add other tabs for other features. 
 1. A tab for "check-in status", for example, would render options for a teacher to "view who I have checked-in with today" and "who I have not checked-in with today". 
 2. Another tab for "suggested resources" would allow a teacher to select ant student to render a displayed list of suggested social-emotional learning resources.
