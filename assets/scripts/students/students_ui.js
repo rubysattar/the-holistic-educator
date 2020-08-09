@@ -4,8 +4,10 @@ const showStudentsTemplate = require('../templates/students-listing.handlebars')
 
 const getStudentsSuccess = (data) => {
   const showStudentsHtml = showStudentsTemplate({ students: data.students })
-  console.log(data)
+  // console.log(data)
   $('#students-list').html(showStudentsHtml)
+  $('.student-roster-view').show()
+  $('.student-create').show()
 }
 const createStudentSuccess = () => {
   $('#student-create-message').text('Student added to your roster!')

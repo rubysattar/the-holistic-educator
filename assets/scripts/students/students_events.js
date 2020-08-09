@@ -3,6 +3,9 @@ const ui = require('./students_ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const studentsEventsListeners = function () {
+  $('.student-roster-view').hide()
+  $('.student-create').hide()
+
   $('#get-students').on('click', onGetStudents)
   $('#student-create').on('submit', onCreateStudent)
   $('#students-list').on('click', '#get-students-in-template', onGetStudents)
