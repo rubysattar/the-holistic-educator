@@ -13,9 +13,8 @@
 
 ## Important Links
 
-- [Other Repo](www.link.com)
 - [Deployed API](https://whispering-anchorage-25173.herokuapp.com)
-- [Deployed Client](www.link.com)
+- [Deployed Client](https://rubysattar.github.io/the-holistic-educator/)
 
 ## Planning Story
 
