@@ -8,6 +8,10 @@ const getStudentsSuccess = (data) => {
   $('#students-list').html(showStudentsHtml)
   $('.student-roster-view').show()
 }
+
+const getStudentsFailure = () => {
+  console.error()
+}
 const createStudentSuccess = () => {
   $('#student-create-message').text('Student added to your roster!')
   $('form').trigger('reset')
@@ -40,5 +44,6 @@ module.exports = {
   deleteStudentSuccess,
   deleteStudentFailure,
   updateStudentFailure,
-  updateStudentSuccess
+  updateStudentSuccess,
+  getStudentsFailure
 }

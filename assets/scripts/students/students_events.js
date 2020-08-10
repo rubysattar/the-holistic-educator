@@ -5,7 +5,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const studentsEventsListeners = function () {
   $('#get-students').on('click', onGetStudents)
   $('#student-create').on('submit', onCreateStudent)
-  $('#students-list').on('click', '#get-students-in-template', onGetStudents)
+  // $('#students-list').on('click', '#get-students-in-template', onGetStudents)
   $('#students-list').on('click', '.delete-student', onDeleteStudent)
   $('#students-list').on('click', '.update-student-button', onPatchStudent)
 
@@ -20,7 +20,13 @@ const onDeleteStudent = (event) => {
   api.deleteStudent(id)
     // trigger the updated list to show
     // not dynamically removing the student, have to index again to prove deletion
-    .then($('#get-students').trigger('click', onGetStudents))
+    .then(() => {
+      // this probably should be in Ui
+      const theDivToDelete = $(`div[data-id=${id}]`)
+
+      // Remove ONLY that div from the DOM
+      theDivToDelete.remove()
+    })
     .then(ui.deleteStudentSuccess)
     .catch(ui.deleteStudentFailure)
 }
