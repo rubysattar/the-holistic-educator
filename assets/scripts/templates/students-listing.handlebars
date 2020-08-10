@@ -1,51 +1,76 @@
-{{#each students as |student|}}
-<div class="card rounded border border-info" data-id="{{student._id}}">
-  <div class="card-body">
-    <ol class="list-group list-group-flush">
-    <li class="list-group-item">
-    {{!-- {{log student._id}} --}}
-      <p><strong>Name:</strong>
-        {{#if student.name}}
-          {{student.name}}
-        {{else}}
-          No name provided.
-        {{/if}}
-      </p>
-      <p><strong>Grade:</strong>
-        {{#if student.grade}}
-          {{student.grade}}
-        {{else}}
-          No grade level provided.
-        {{/if}}
-      </p>
-      <p><strong>Check-in note:</strong>
-        {{#if student.checkedIn}}
-          {{student.checkedIn}}
-        {{else}}
-          No note provided.
-        {{/if}}
-      </p>
-      <form class="student-update">
-        {{!-- <label for="name"><em>Student Name:</em></label> --}}
-        <input name="student[name]" type="text" placeholder="update student name">
-        <br>
-        {{!-- <label for="name"><em>Student Grade level:</em></label> --}}
-        <input name="student[grade]" type="text" placeholder="update grade, example: 'first'">
-        <br>
-        {{!-- <label for="name"><em>check-in notes:</em></label> --}}
-        <input name="student[checkedIn]" type="text" placeholder="update note, example: 'Jimmy said he was excited about his new fish'">
-        <br>
-        <button class="update-student-button btn btn-info" data-id="{{student._id}}">Update this student</button>
-        
-      </form>
-        {{!-- <button class="update-student" data-id="{{student._id}}">Update this student</button> --}}
-      
-      <button class="delete-student btn btn-danger" data-id="{{student._id}}">Delete this student</button>
-      {{!-- {{> partial}} --}}
-    </li>
-    </ol>
-  </div>
+<div>
+  <p id="student-message"></p>
 </div>
-
-
-{{/each}}
+<div class="row">
+  <div class="card col-sm-6 student-create">
+    <div class="card-body">
+      <form id="student-create">
+          <h4 class="card-title">Add a student to your roster.</h4>
+          <!-- I might want these fields to show only if 'add a student to your roster', a button, is selected -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Student Name:</li>
+            <input name="student[name]" type="text" placeholder="'Jane Goodall'">
+            <br>
+            <li class="list-group-item">Student Grade:</li>
+            <input name="student[grade]" type="text" placeholder="'first'">
+            <br>
+            <li class="list-group-item">Check-in note:</li>
+            <input name="student[checkedIn]" type="text" placeholder="'Jane said she's excited about her latest adventure.'">
+            <br>
+          </ul>
+          <button class="btn btn-info" id="add-new-student" type="submit">Add Student</button>
+          <!-- <p id="student-create-message"></p> -->
+      </form>
+    </div>
+  </div>
+<div class="col-sm-6" id="students-list">
+  {{#each students as |student|}}
+  <div class="card rounded border border-info" data-id="{{student._id}}">
+    <div class="card-body">
+      <ol class="list-group list-group-flush">
+      <li class="list-group-item">
+      {{!-- {{log student._id}} --}}
+        <p><strong>Name:</strong>
+          {{#if student.name}}
+            {{student.name}}
+          {{else}}
+            No name provided.
+          {{/if}}
+        </p>
+        <p><strong>Grade:</strong>
+          {{#if student.grade}}
+            {{student.grade}}
+          {{else}}
+            No grade level provided.
+          {{/if}}
+        </p>
+        <p><strong>Check-in note:</strong>
+          {{#if student.checkedIn}}
+            {{student.checkedIn}}
+          {{else}}
+            No note provided.
+          {{/if}}
+        </p>
+        <form class="student-update">
+          {{!-- <label for="name"><em>Student Name:</em></label> --}}
+          <input name="student[name]" type="text" placeholder="update student name">
+          <br>
+          {{!-- <label for="name"><em>Student Grade level:</em></label> --}}
+          <input name="student[grade]" type="text" placeholder="update grade, example: 'first'">
+          <br>
+          {{!-- <label for="name"><em>check-in notes:</em></label> --}}
+          <input name="student[checkedIn]" type="text" placeholder="update note, example: 'Jimmy said he was excited about his new fish'">
+          <br>
+          <button class="update-student-button btn btn-info" data-id="{{student._id}}">Update this student</button>
+          
+        </form>
+          {{!-- <button class="update-student" data-id="{{student._id}}">Update this student</button> --}}
+        
+        <button class="delete-student btn btn-danger" data-id="{{student._id}}">Delete this student</button>
+        {{!-- {{> partial}} --}}
+      </li>
+      </ol>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -4,13 +4,12 @@ const getFormFields = require('../../../lib/get-form-fields')
 
 const studentsEventsListeners = function () {
   $('#get-students').on('click', onGetStudents)
-  $('#student-create').on('submit', onCreateStudent)
-  // $('#students-list').on('click', '#get-students-in-template', onGetStudents)
-  $('#students-list').on('click', '.delete-student', onDeleteStudent)
-  $('#students-list').on('click', '.update-student-button', onPatchStudent)
+  $('.template-view').on('submit', '#student-create', onCreateStudent)
+  $('.template-view').on('click', '.delete-student', onDeleteStudent)
+  $('.template-view').on('click', '.update-student-button', onPatchStudent)
 
   // hide the following unless triggered
-  $('.student-roster-view').hide()
+  $('.template-view').hide()
 }
 
 // NEED TO COME BACK AND ENTER UI that considers hiding the deleted student

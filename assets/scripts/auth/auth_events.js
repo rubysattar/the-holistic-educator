@@ -14,7 +14,7 @@ const authEventsListeners = function () {
   $('.change-password').hide()
   $('.sign-out').hide()
   $('main').hide()
-  $('.student-roster-view').hide()
+  $('.template-view').hide()
   $('.about-view').hide()
 }
 

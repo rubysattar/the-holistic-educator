@@ -5,8 +5,8 @@ const showStudentsTemplate = require('../templates/students-listing.handlebars')
 const getStudentsSuccess = (data) => {
   const showStudentsHtml = showStudentsTemplate({ students: data.students })
   // console.log(data)
-  $('#students-list').html(showStudentsHtml)
-  $('.student-roster-view').show()
+  $('.template-view').html(showStudentsHtml)
+  $('.template-view').show()
 }
 
 const getStudentsFailure = () => {

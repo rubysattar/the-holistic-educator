@@ -52,7 +52,7 @@ const signOutSuccess = function () {
   $('main').hide()
   store.user = null
   $('#students-list').empty()
-  $('.student-roster-view').hide()
+  $('.template-view').hide()
   $('p').empty()
 }
 const signOutFailure = function () {
