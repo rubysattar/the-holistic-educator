@@ -13,11 +13,11 @@ const getStudentsFailure = () => {
   console.error()
 }
 const createStudentSuccess = () => {
-  $('#student-create-message').text('Student added to your roster!')
+  $('#student-message').text('Student added to your roster!')
   $('form').trigger('reset')
 }
 const createStudentFailure = () => {
-  $('#student-create-message').text('Student could not be added to your roster.')
+  $('#student-message').text('Student could not be added to your roster.')
   $('form').trigger('reset')
 }
 const deleteStudentSuccess = () => {
