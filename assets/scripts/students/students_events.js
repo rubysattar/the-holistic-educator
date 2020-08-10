@@ -18,20 +18,19 @@ const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
   api.deleteStudent(id)
-
-    // you don't wanna be in a situation where you are doing things individually, 
-    // let's restructure Get Students so it can be called again to refresh the index
-
-    // .then(() => {
-    //   // this probably should be in Ui
-    //   const theDivToDelete = $(`div[data-id=${id}]`)
-
-    //   // Remove ONLY that div from the DOM
-    //   theDivToDelete.remove()
-    // })
     .then(ui.deleteStudentSuccess)
     .then(onGetStudents)
     .catch(ui.deleteStudentFailure)
+  // you don't wanna be in a situation where you are doing things individually,
+  // let's restructure Get Students so it can be called again to refresh the index
+
+  // .then(() => {
+  //   // this probably should be in Ui
+  //   const theDivToDelete = $(`div[data-id=${id}]`)
+
+  //   // Remove ONLY that div from the DOM
+  //   theDivToDelete.remove()
+  // })
 }
 
 const onPatchStudent = (event) => {
@@ -56,7 +55,7 @@ const onGetStudents = (event) => {
   if (event && event.preventDefault) {
     event.preventDefault()
   }
-  // because we want Patch and Delete to empty the list and re-get an updated version,
+  // because we want Patch and Delete to empty the list and re-index an updated version,
   // Get should always do the following
   $('#students-list').empty()
 
