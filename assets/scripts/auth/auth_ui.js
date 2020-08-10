@@ -15,7 +15,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function () {
-  $('#auth-message').text('Sign-in was successful!')
+  // $('#auth-message').text('Sign-in was successful!')
   $('form').trigger('reset')
   $('.change-password').show()
   $('.sign-out').show()
@@ -40,10 +40,12 @@ const changePasswordSuccess = function () {
   $('form').trigger('reset')
 }
 const signOutSuccess = function () {
-  $('#unauth-message').text('You are now signed out!')
+  // $('#unauth-message').text('You are now signed out!')
   $('#unauthenticated').show()
   $('.sign-up').show()
+  $('#sign-up').show()
   $('.sign-in').show()
+  $('#sign-in').show()
   $('.change-password').hide()
   $('.sign-out').hide()
   $('#landing-page').show()
