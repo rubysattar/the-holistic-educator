@@ -18,16 +18,19 @@ const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
   api.deleteStudent(id)
-    // trigger the updated list to show
-    // not dynamically removing the student, have to index again to prove deletion
-    .then(() => {
-      // this probably should be in Ui
-      const theDivToDelete = $(`div[data-id=${id}]`)
 
-      // Remove ONLY that div from the DOM
-      theDivToDelete.remove()
-    })
+    // you don't wanna be in a situation where you are doing things individually, 
+    // let's restructure Get Students so it can be called again to refresh the index
+
+    // .then(() => {
+    //   // this probably should be in Ui
+    //   const theDivToDelete = $(`div[data-id=${id}]`)
+
+    //   // Remove ONLY that div from the DOM
+    //   theDivToDelete.remove()
+    // })
     .then(ui.deleteStudentSuccess)
+    .then(onGetStudents)
     .catch(ui.deleteStudentFailure)
 }
 
@@ -43,17 +46,23 @@ const onPatchStudent = (event) => {
   // console.log({ formData })
 
   api.patchStudent(studentId, formData)
-    .then($('#get-students').trigger('click', onGetStudents))
+    .then(onGetStudents)
     .then(ui.updateStudentSuccess)
     .catch(ui.updateStudentFailure)
 }
 
 const onGetStudents = (event) => {
-  event.preventDefault()
+  // if there was a click event, run like expected for a click event
+  if (event && event.preventDefault) {
+    event.preventDefault()
+  }
+  // because we want Patch and Delete to empty the list and re-get an updated version,
+  // Get should always do the following
+  $('#students-list').empty()
+
   api.getStudents()
     .then(ui.getStudentsSuccess)
-    .catch(ui.getStudentsFailure)
-}
+    .catch(ui.getStudentsFailure)}
 
 // NEED TO COME BACK AND ENTER UI that considers showing the created student
 const onCreateStudent = (event) => {
@@ -64,7 +73,7 @@ const onCreateStudent = (event) => {
     // .then((newlyCreatedStudent) => {
     //   ui.appendStudent(newlyCreatedStudent)
     // })
-    .then($('#get-students').trigger('click', onGetStudents))
+    .then(onGetStudents)
     .then(ui.createStudentSuccess)
     .catch(ui.createStudentFailure)
 }
