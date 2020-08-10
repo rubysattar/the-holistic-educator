@@ -62,7 +62,8 @@ const onGetStudents = (event) => {
 
   api.getStudents()
     .then(ui.getStudentsSuccess)
-    .catch(ui.getStudentsFailure)}
+    .catch(ui.getStudentsFailure)
+}
 
 // NEED TO COME BACK AND ENTER UI that considers showing the created student
 const onCreateStudent = (event) => {
