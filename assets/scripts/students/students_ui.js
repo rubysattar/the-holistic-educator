@@ -1,5 +1,5 @@
 'use strict'
-
+const showUserProfileTemplate = require('../templates/user-profile.handlebars')
 const showStudentsTemplate = require('../templates/students-listing.handlebars')
 
 const getStudentsSuccess = (data) => {
@@ -33,9 +33,12 @@ const updateStudentSuccess = () => {
 const updateStudentFailure = () => {
   $('#student-message').text('Student was not updated.')
 }
-// const appendStudent = (newStudent) => {
-//   $('#students-list').html(showStudentsHtml.append(newStudent))
-// }
+const renderUserProfile = (data) => {
+  const showUserHtml = showUserProfileTemplate({ user: data.user })
+  // console.log(data)
+  $('.template-view').html(showUserHtml)
+  $('.template-view').show()
+}
 
 module.exports = {
   getStudentsSuccess,
@@ -45,5 +48,6 @@ module.exports = {
   deleteStudentFailure,
   updateStudentFailure,
   updateStudentSuccess,
-  getStudentsFailure
+  getStudentsFailure,
+  renderUserProfile
 }

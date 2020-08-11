@@ -8,6 +8,8 @@ const studentsEventsListeners = function () {
   $('.template-view').on('click', '.delete-student', onDeleteStudent)
   $('.template-view').on('click', '.update-student-button', onPatchStudent)
 
+  $('#user-profile').on('click', ui.renderUserProfile)
+
   // hide the following unless triggered
   $('.template-view').hide()
 }
