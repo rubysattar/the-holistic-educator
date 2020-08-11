@@ -15,7 +15,6 @@ const studentsEventsListeners = function () {
   $('.template-view').hide()
 }
 
-// NEED TO COME BACK AND ENTER UI that considers hiding the deleted student
 const onDeleteStudent = (event) => {
   event.preventDefault()
   const id = $(event.currentTarget).data('id')
