@@ -22,6 +22,7 @@ const signInSuccess = function () {
   $('#unauthenticated').hide()
   $('#landing-page').hide()
   $('main').show()
+  $('#about-button').trigger('click')
 }
 const signInFailure = function (errorMessage) {
   if (errorMessage) {
