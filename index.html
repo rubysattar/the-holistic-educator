@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Holistic Educator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body>
+
+<!-- LANDING PAGE -->
+  <div class="landing-page">
+    <div class="container">
+      <div class="row" id="landing-page">
+        <div class="col-sm-12">
+          <section>
+            <div id="introduction">
+              <h1>The Holistic Educator</h1>
+              <h2>T.H.E. app for building and tracking connections with your students.</h2>
+            </div>
+            <p id="unauth-message"></p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <div class="row" id="unauthenticated">
+
+        <div class="col-sm-6">
+          <div class="card sign-up">
+            <div class="card-body">
+              <form id= "sign-up">
+                <h4 class="card-title">New to this site? Sign-up!</h4>
+                <input name="credentials[email]" type="email" placeholder= "Your email">
+                <br>
+                <input name="credentials[password]" type="password" placeholder="Password">
+                <br>
+                <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+                <br>
+                <button class="btn btn-success" type="submit">Sign up!</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card sign-in">
+            <div class="card-body">
+              <form id= "sign-in"> 
+                <h4 class="card-title">Already signed up? Sign-in!</h4>
+                <input name="credentials[email]" type="email" placeholder= "Your email">
+                <br>
+                <input name="credentials[password]" type="password" placeholder="Password">
+                <br>
+                <button class="btn btn-success" type="submit">Sign in!</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  
+    </div> 
+  </div>
+<!-- END OF LANDING PAGE -->
+
+    <main>
+<!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">T.H.E. (logo)</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item active">
+                <button class="nav-link btn" id="about-button">About T.H.E. <span class="sr-only">(current)</span></button>
+              </li>
+
+              <li class="nav-item">
+                <button class="nav-link btn" id="user-profile"> User Profile</button>
+              </li>
+
+              <li class="nav-item">
+                <button class="nav-link btn" id="get-students"> Student Roster</button>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Suggested Resources</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Change PW/Sign-out
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                  <form class="change-password dropdown-item" id="change-password">
+                    <h4 class="card-title"> Want to change your password?</h4>
+                    <input name="passwords[old]" type="password" placeholder="Old password">
+                    <br>
+                    <input name="passwords[new]" type="password" placeholder="New password">
+                    <br>
+                    <button class="btn" type="submit">Change Password!</button>
+                  </form>
+                    
+                  <form class="sign-out dropdown-item" id= "sign-out">
+                    <button class="btn" id="sign-out-button" type="submit">Sign out!</button>
+                  </form>
+
+                </div>
+              </li>
+
+            </ul>
+            
+          </div>
+        </nav>
+<!-- END OF NAV BAR -->
+
+        <p id="auth-message"></p>
+
+        <!-- THE FOLLOWING EMPTY DIV CONTAINER IS WHERE I REPLACE TEMPLATES DEPENDING ON WHAT TAB BUTTON IS CLICKED -->
+        <div class="container template-view"></div>  
+        
+          
+    </main>
+  </body>
+</html>
